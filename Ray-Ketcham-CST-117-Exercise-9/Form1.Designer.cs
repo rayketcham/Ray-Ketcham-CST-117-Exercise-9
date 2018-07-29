@@ -1,4 +1,4 @@
-﻿namespace Ray_Ketcham_CST_117_Exercise_9
+﻿namespace CST117_IC08_console
 {
     partial class Form1
     {

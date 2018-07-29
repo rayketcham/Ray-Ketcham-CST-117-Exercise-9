@@ -1,22 +1,44 @@
-﻿using System;
+﻿//use for IC08
+//Lydia's code
+using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Text;
 using System.Threading.Tasks;
-using System.Windows.Forms;
 
-namespace Ray_Ketcham_CST_117_Exercise_9
+//Name: Ray Ketcham
+//Class: CST-117
+//Date: 07/29/2018
+//Instructor: Dr. Smithers
+
+namespace CST117_IC08_console
 {
-    static class Program
+    class Program
     {
-        /// <summary>
-        /// The main entry point for the application.
-        /// </summary>
-        [STAThread]
-        static void Main()
+        static void Main(string[] args)
         {
-            Application.EnableVisualStyles();
-            Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new Form1());
+            //make some sets
+            Set A = new Set();
+            Set B = new Set();
+
+            //put some stuff in the sets
+            Random r = new Random();
+            for (int i = 0; i < 10; i++)
+            {
+                A.addElement(r.Next(4));
+                B.addElement(r.Next(12));
+            }
+
+            //display each set and the union
+            Console.WriteLine("A: " + A);
+            Console.WriteLine("B: " + B);
+            Console.WriteLine("A union B: " + A.union(B));
+
+            //display original sets (should be unchanged)
+            Console.WriteLine("After union operation");
+            Console.WriteLine("A: " + A);
+            Console.WriteLine("B: " + B);
+
         }
     }
 }
